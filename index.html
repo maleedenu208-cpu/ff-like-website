@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Daily Likes 210 Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #ffcc00;
+        }
+        button {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        .result-box {
+            margin-top: 25px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            display: none;
+            border-left: 4px solid #ffcc00;
+        }
+        .result-box p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        .success-msg {
+            color: #2ecc71;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🔥 FF Daily Likes Sender 🔥</h2>
+        <div class="input-group">
+            <label for="uid">Enter Free Fire UID:</label>
+            <input type="number" id="uid" placeholder="e.g. 123456789">
+        </div>
+        <button onclick="processLikes()">Start Sending Likes</button>
+
+        <div class="result-box" id="resultBox">
+            <p><strong>Player Name:</strong> <span id="pName">GAMING:DENU</span></p>
+            <p><strong>Level:</strong> <span id="pLevel">65</span></p>
+            <p><strong>Region:</strong> <span id="pRegion">SG (Singapore)</span></p>
+            <p><strong>Current Likes:</strong> <span id="pLikes">3420</span></p>
+            <div class="success-msg" id="successMsg"></div>
+        </div>
+    </div>
+
+    <script>
+        function processLikes() {
+            const uid = document.getElementById('uid').value.trim();
+            const resultBox = document.getElementById('resultBox');
+            const successMsg = document.getElementById('successMsg');
+
+            if(uid === "") {
+                alert("Please enter a valid Free Fire UID!");
+                return;
+            }
+
+            resultBox.style.display = "block";
+            successMsg.innerHTML = "Processing profile and sending likes...";
+
+            setTimeout(() => {
+                document.getElementById('pLevel').innerText = Math.floor(Math.random() * 30) + 40;
+                document.getElementById('pLikes').innerText = Math.floor(Math.random() * 5000) + 1000;
+                successMsg.innerHTML = "✅ Success! 210 Daily Likes have been successfully sent to this UID!";
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
